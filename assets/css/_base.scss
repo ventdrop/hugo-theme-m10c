@@ -32,9 +32,12 @@ a {
 // small inline code-blocks in the middle of normal text (mainly because of
 // the very noticeable difference in x-height). This CSS corrects that problem.
 code {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
-  color: rgba($light-color, .8);
+  color: #65a6f5; /* Your primary color */
+  background-color: #000000; /* Light background color */
+  padding: 2px 4px; /* Adds some padding */
+  border-radius: 4px; /* Rounds the corners */
 
   // Fixes iOS font sizing anomaly
   text-size-adjust: 100%;
@@ -42,6 +45,11 @@ code {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
+::selection {
+  background: rgba(175, 186, 196, .25); /* Selected text background color */
+}
+
 
 pre {
   font-size: 1rem;
